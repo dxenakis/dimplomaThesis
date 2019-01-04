@@ -1,0 +1,32 @@
+<div class="col-md-6 col-md-offset-3" >
+
+<div class="form-group">
+  <button [disabled]="loading"  class="btn btn-primary"  (click)="RouteAll()">Truck-Routes</button>
+</div>
+
+
+
+<table id = "RouteAll" class="w3-table">
+  <tbody>
+  <tr>
+    <th style="width:25%">Route</th>
+    <th style="width:25%">Date</th>
+    <th style="width:15%">RouteTracking</th>
+    <th style="width:15%">Truck</th>
+
+
+
+  </tr>
+
+  <tr   *ngFor="let routes of RouteModel" >
+    <td id ="hstorage" >{{ routes.Route }}&nbsp;</td>
+    <td id ="hname"    >{{ routes.trndate }}&nbsp;</td>
+    <td >{{routes.RouteTracking }}&nbsp;</td>
+    <td >{{routes.truck }}&nbsp;</td>
+
+
+  </tr>
+  </tbody>
+</table>
+
+</div>

@@ -1,0 +1,25 @@
+<script src="authenticationService.ts"></script>
+<div class="col-md-6 col-md-offset-3">
+  <h2>Login</h2>
+
+
+      <label>Username</label>
+      <input type="text" value="Dimitris" class="form-control" (input) ="OnUsername($event)" />
+
+
+
+      <label>Password</label>
+      <input type="password" value="qwerty!2" class="form-control" (input)="OnPassword($event)"/>
+
+
+
+
+    <div class="form-group">
+      <button [disabled]="loading"  class="btn btn-primary"  (click)="login()">Login</button>
+
+    </div>
+
+
+
+
+</div>

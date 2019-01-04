@@ -1,0 +1,22 @@
+<div class="col-md-6 col-md-offset-3" >
+  <div>
+    <label>Interesting Destination</label>
+    <input type="text"  class="form-control" size="40" (input) ="OnTimeDesti($event)" />
+  </div>
+  <br />
+  <div class="form-group">
+    <button [disabled]="loading"  class="btn btn-primary"  (click)="getTimeLatLong()">Get It!</button>
+  </div>
+  <br />
+</div>
+
+
+<div class="col-sm-11" >
+  <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-direction [origin]="origin"  [waypoints]="waypoints"  [destination]="destination">
+
+  </agm-direction>
+
+  </agm-map>
+</div>
+
